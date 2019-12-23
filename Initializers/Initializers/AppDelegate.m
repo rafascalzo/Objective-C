@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DateCalculator.h"
+#import "TemperatureConverter.h"
 @interface AppDelegate ()
 
 @end
@@ -29,6 +30,11 @@
     } else {
         NSLog(@"%@, you shouldn`t date, you old man!", calc.hisName);
     }
+    
+    
+    TemperatureConverter * converter = [[TemperatureConverter alloc] initWithLocation: @"London"];
+    
+    NSLog(@"%@ Is the city of...", converter.location);
     return YES;
 }
 

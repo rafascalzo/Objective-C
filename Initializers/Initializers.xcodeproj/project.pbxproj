@@ -15,6 +15,7 @@
 		89A7271C23B1477E00C9B7A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A7271A23B1477E00C9B7A9 /* LaunchScreen.storyboard */; };
 		89A7271F23B1477E00C9B7A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A7271E23B1477E00C9B7A9 /* main.m */; };
 		89A7272723B1498C00C9B7A9 /* DateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A7272623B1498C00C9B7A9 /* DateCalculator.m */; };
+		89A7272A23B152CA00C9B7A9 /* TemperatureConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A7272923B152CA00C9B7A9 /* TemperatureConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		89A7271E23B1477E00C9B7A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89A7272523B1498C00C9B7A9 /* DateCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCalculator.h; sourceTree = "<group>"; };
 		89A7272623B1498C00C9B7A9 /* DateCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCalculator.m; sourceTree = "<group>"; };
+		89A7272823B152CA00C9B7A9 /* TemperatureConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemperatureConverter.h; sourceTree = "<group>"; };
+		89A7272923B152CA00C9B7A9 /* TemperatureConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				89A7271E23B1477E00C9B7A9 /* main.m */,
 				89A7272523B1498C00C9B7A9 /* DateCalculator.h */,
 				89A7272623B1498C00C9B7A9 /* DateCalculator.m */,
+				89A7272823B152CA00C9B7A9 /* TemperatureConverter.h */,
+				89A7272923B152CA00C9B7A9 /* TemperatureConverter.m */,
 			);
 			path = Initializers;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				89A7271F23B1477E00C9B7A9 /* main.m in Sources */,
 				89A7271123B1477C00C9B7A9 /* SceneDelegate.m in Sources */,
 				89A7272723B1498C00C9B7A9 /* DateCalculator.m in Sources */,
+				89A7272A23B152CA00C9B7A9 /* TemperatureConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
