@@ -21,7 +21,9 @@ static BOOL different(int thing1, int thing2) {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 0 = false, 1 = true, use to build reusable frameworks c/c++ code
     bool cBool = true;
+    // Objective-C bool style, 0 = false, 1 || > = true, best pratices for Objective-C
     BOOL objcBool = YES;
     
     NSLog(@"cBool: %d objcBool: %d", cBool, objcBool);
@@ -41,6 +43,12 @@ static BOOL different(int thing1, int thing2) {
     }
     if (objcBool) {
         NSLog(@"objcBool is true");
+    }
+    
+    if (different(1, 2) == YES) {
+        NSLog(@"Different");
+    } else {
+        NSLog(@"Not different");
     }
     
     if (different(1, 2)) {
@@ -67,6 +75,5 @@ static BOOL different(int thing1, int thing2) {
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
-
 
 @end

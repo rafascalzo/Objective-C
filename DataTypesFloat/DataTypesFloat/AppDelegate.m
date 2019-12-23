@@ -34,29 +34,67 @@
     float oneThirdRight = 1.0/3.0;
     NSLog(@"One third right: %f", oneThirdRight);
     
-   // float tollerance = FLT_EPSILON;
     
-   // float initial = 0.1;
-    float initial = 1000000;
-//    f = initial / 3;
-//    f += initial / 3;
-//    f += initial / 3;
+    float initial1 = 0.1;
+    float test = initial1 / 3;
+    test += initial1 / 3;
+    test += initial1 / 3;
     
+    NSLog(@"test: %.12f", test);
+    NSLog(@"Initial: %.12f", initial1);
+    NSLog(@"Test error: %.12f", ABS(test - initial1));
+    
+    if (test == initial1) {
+        NSLog(@"Match!");
+    } else {
+        NSLog(@"Not match =[");
+    }
+    
+    float toleranceTest = FLT_EPSILON;
+    
+    if (ABS(test - initial1) < toleranceTest) {
+        NSLog(@"Match with tolerance: %.12f", toleranceTest);
+    } else {
+        NSLog(@"Not match with tolerance");
+    }
+    
+    
+    float initial2 = 0.1;
     int iterations = 1327;
+    float step = initial2 / iterations;
+    float test2 = 0;
+    float toleranceTest2 = FLT_EPSILON;
+    for (int i = 0; i < iterations; i++) {
+        test2 += step;
+    }
     
-    float step = initial / iterations;
+    NSLog(@"test2: %.12f",test2);
+    NSLog(@"Error: %.12f", ABS(initial2 - test2));
+    NSLog(@"Tolerance: %.12f", toleranceTest2);
+    
+    if (ABS(test2 - initial2) < toleranceTest2) {
+        NSLog(@"Match with tolerance accumulated: %.12f", toleranceTest2);
+    } else {
+        NSLog(@"Not match with tolerance accumulated: %.12f", toleranceTest2);
+    }
+    
+    // it won`t be wright for bigger numbers... so need more tolerance
+    float initial = 1000000;
+    int iterations2 = 1327;
+    
+    float step2 = initial / iterations2;
     f = 0;
     for (int i = 0; i < iterations; ++i) {
-        f += step;
+        f += step2;
     }
     //float tollerance = iterations * FLT_EPSILON;
-    float tollerance = iterations * FLT_EPSILON * ABS(f+initial);
+    float tolleranceTest3 = iterations * FLT_EPSILON * ABS(f+initial);
     NSLog(@"f: %.12f", f);
     NSLog(@"initial: %.12f", initial);
     NSLog(@"Error: %.12f", ABS(f - initial));
-    NSLog(@"Tollerance %.12f", tollerance);
+    NSLog(@"Tollerance %.12f", tolleranceTest3);
     
-    if (ABS(f-initial) < tollerance) {
+    if (ABS(f-initial) < tolleranceTest3) {
         NSLog(@"Match!");
     } else {
         NSLog(@"Not match =(");
