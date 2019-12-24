@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic)NSString *location;
 
-- (instancetype)initWithLocation:(NSString *)location;
+- (instancetype)initWithLocation:(NSString*)location;
+- (float)getTemperature;
 
 @end
 
