@@ -33,11 +33,11 @@
     
     
     TemperatureConverter * converter = [[TemperatureConverter alloc] initWithLocation: @"London"];
-    float temperature = converter.getTemperature;
+    float temperature = [converter getTemperature];
     NSLog(@"%@: Temperature now is %.f degrees", converter.location,temperature);
     
     TemperatureConverter * newConverter = [[TemperatureConverter alloc] initWithLocation:@"Russia"];
-    NSLog(@"%@: Temperature now is %.f degrees",newConverter.location,newConverter.getTemperature);
+    NSLog(@"%@: Temperature now is %.f degrees",newConverter.location,[newConverter getTemperature]);
     return YES;
 }
 
