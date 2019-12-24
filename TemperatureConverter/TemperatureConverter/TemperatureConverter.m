@@ -13,7 +13,7 @@
 }
 
 -(float)convertCelsiusToKelvinWithA:(float)a {
-    return a + 273.0;
+    return a + 273.15;
 }
 
 -(float)convertCelsiusToFahrenheitWithA:(float)a {
@@ -26,20 +26,19 @@
 -(float)convertFahrenheitToCelsiusWithA:(float)a {
     //C/5 = F-32 / 9
     //C = 5/9 * (F - 32)
-    return (5.0/9.0) * (a - 32);
+    return (5.0/9.0) * (a - 32.0);
 }
 
 -(float)convertFahrenheitToKelvinWithA:(float)a {
-    return _result;
+    return a + 459.67;
 }
 
 -(float)convertKelvinToCelsiusWithA:(float)a {
-    return a - 273;
+    return a - 273.15;
 }
 
 -(float)convertKelvinToFahrenheitWithA:(float)a {
-    return  _result;
+    return a -459.67;
 }
-
 
 @end
