@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    DateCalculator *calc = [[DateCalculator alloc] init];
+    DateCalculator * calc = [[DateCalculator alloc] init];
     [calc setHisAge:30];
     [calc setHisName:@"Rafael"];
     

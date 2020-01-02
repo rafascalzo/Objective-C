@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TemperatureConverter : NSObject
 
+@property (strong, nonatomic) NSString * location;
+
 -(float)convertCelsiusToFahrenheitWithA:(float)a;
 
 -(float)convertCelsiusToKelvinWithA:(float)a;

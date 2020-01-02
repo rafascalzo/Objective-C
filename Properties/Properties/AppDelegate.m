@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  TemperatureConverter
+//  Properties
 //
 //  Created by Rafael Scalzo on 24/12/19.
 //  Copyright © 2019 Rafael Scalzo. All rights reserved.
+//
 
 #import "AppDelegate.h"
-#import "TemperatureConverter.h"
+#import "DateCalculator.h"
 
 @interface AppDelegate ()
 
@@ -17,18 +18,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    TemperatureConverter * converter = [[TemperatureConverter alloc] init];
     
-    [converter setLocation:@"London"];
+    DateCalculator *calculator = [[DateCalculator alloc] init];
+    [calculator setHisAge:30];
+    [calculator setHisName:@"Rafael"];
+    //NSString *hisName = [calculator hisName];
+    BOOL shouldDate = [calculator shouldDateIfHerAgeIs:23];
     
-    float temperatureInFahrenheit = [converter convertCelsiusToFahrenheitWithA:26.67];
-    float temperatureInCelsius = [converter convertFahrenheitToCelsiusWithA:80];
-    float temperatureInKelvin = [converter convertCelsiusToKelvinWithA:26.67];
-    
-    NSLog(@"%@ temperature in Fahrenheit %.2f",[converter location],temperatureInFahrenheit);
-    NSLog(@"%@ temperature in Celsius %.2f",[converter location],temperatureInCelsius);
-    NSLog(@"%@ temperature in Kelvin %.2f",[converter location], temperatureInKelvin);
-    
+    if (shouldDate) {
+        NSLog(@"It`s ok to date %@, you old man!", [calculator hisName]);
+        //can use with dot notation
+        //NSLog(@"It`s ok to date %@, you old man!", calculator.hisName);
+    } else {
+        NSLog(@"%@, you shouldn`t date, you old man!", [calculator hisName]);
+    }
     return YES;
 }
 

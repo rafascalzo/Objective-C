@@ -20,7 +20,7 @@
     // C/5 = (f-32)/9
     // f - 32 = 9 * C / 5
     // f = (9/5 * C) + 32
-    return (9.0/5.0*a) + 32.0;
+    return ((9.0/5.0) * a) + 32.0;
 }
 
 -(float)convertFahrenheitToCelsiusWithA:(float)a {
