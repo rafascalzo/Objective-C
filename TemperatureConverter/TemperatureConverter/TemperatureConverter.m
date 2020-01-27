@@ -2,7 +2,7 @@
 //  TemperatureConverter.m
 //  TemperatureConverter
 //
-//  Created by Fulltrack Mobile on 24/12/19.
+//  Created by Rafael VSM on 24/12/19.
 //  Copyright © 2019 Rafael Scalzo. All rights reserved.
 //
 
